@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+<link rel="stylesheet" href="./css/contact.css" type="text/css" media="all" />
+</head>
+<body>
+    
+  <!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">
+    <img src="./img/logo.png" alt="Print 420 Logo"> <!-- Replace with your logo -->
+    <span id="userEmail" style="display:none; font-weight: bold;"></span>
+  </div>
+  <ul class="nav-links">
+       <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="orders.html">Orders</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    
+    <li id="authLinks">
+      <!-- ✅ Yahan Firebase Auth Ke Basis Pe Button Change Hoga -->
+      <a href="login.html" id="loginBtn">Login</a>
+    </li>
+    <li id="authLinks">
+      <a href="#" id="logoutBtn" style="display: none;">Logout</a>
+      <a href="signup.html" id="signupBtn">Signup</a>
+    </li>
+    
+  </ul>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</nav>
+  <div style="height: 80px;"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>Contact Us Today</h1>
+        <p>We're happy to answer your questions!</p>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form">
+      <h2>Contact Us</h2>
+<form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="0df5af4d-303c-4797-90fc-6a4dad3b591b">
+  
+  <input type="text" id="name" name="name" placeholder="Your Name" required>
+  <div class="error" id="nameError"></div>
+  
+  <input type="tel" id="phone" name="phone" placeholder="Your Phone" required>
+  <div class="error" id="phoneError"></div>
+  
+  <select id="subject" name="subject" required>
+    <option value="">Select Subject</option>
+    <option value="support">Support</option>
+    <option value="feedback">Feedback</option>
+    <option value="complaint">Complaint</option>
+    <option value="doubt">Doubt</option>
+  </select>
+  <div class="error" id="subjectError"></div>
+  
+  <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+  <div class="error" id="messageError"></div>
+  
+  <!-- Honeypot Spam Protection -->
+  <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+  
+  <button type="submit" id="submitBtn">Submit Form</button>
+</form>
+ </div>
+    </section>
+    
+  <!-- Contact Section (Reach Us) -->
+<section id="reach">
+  <h2>Get in Touch</h2>
+  <div class="contact-container">
+    
+    <!-- WhatsApp -->
+    <a href="https://wa.me/917061171033?text=Hello,%20I%20am%20interested%20in%20your%20services" class="contact-card">
+      <div class="icon-container" style="background: #FFEEEE;">
+        <img src="https://founder0techsolvy.github.io/Imgsparsh/wa.png" alt="WhatsApp">
+      </div>
+      <h3 style="color: #FF0000;">WHATSAPP</h3>
+      <p>+91 7061171033</p>
+    </a>
+    
+    <!-- Phone -->
+    <a href="tel:+917061171033" class="contact-card">
+      <div class="icon-container" style="background: #FFE5E5;">
+        <img src="https://founder0techsolvy.github.io/Imgsparsh/phone.png" alt="Phone">
+      </div>
+      <h3 style="color: #FF0000;">PHONE</h3>
+      <p>+91 70611 71033</p>
+    </a>
+    
+    <!-- Email -->
+    <a href="mailto:pvcptint420@gmail.com?subject=Inquiry" class="contact-card">
+      <div class="icon-container" style="background: #FFDDC1;">
+        <img src="https://founder0techsolvy.github.io/Imgsparsh/email.png" alt="Email">
+      </div>
+      <h3 style="color: #FF0000;">EMAIL</h3>
+      <p>pvcptint420@gmail.com</p>
+    </a>
+    
+    <!-- Address -->
+    <a href="https://maps.app.goo.gl/ArNzGTrWzGwka9G56" class="contact-card">
+      <div class="icon-container" style="background: #FEE2E2;">
+        <img src="https://founder0techsolvy.github.io/Imgsparsh/address.png" alt="Address">
+      </div>
+      <h3 style="color: #FF0000;">ADDRESS</h3>
+      <p>
+        Akhauripur gola,<br> Chausa, Buxar,<br> Bihar, 802114
+      </p>
+    </a>
+    
+  </div>
+</section>
+  
+    <!-- Footer Section -->
+<footer>
+  <div class="footer-overlay"></div> <!-- Animated Background Overlay -->
+  
+  <!-- Top Section with Title & Description -->
+  <div class="footer-intro">
+    <h2>Print420.in By Mr.Ravi Kumar Singh</h2>
+    <div class="underline"></div>
+    <p>Providing high-quality ID card printing, passport photos, and document printing services with fast delivery.</p>
+  </div>
+  
+  <div class="footer-container">
+    
+    <!-- Left Section - Quick Links -->
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="index.html#faqs">FAQs</a></li>
+        <li><a href="index.html#testimonials">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    
+    <!-- Middle Section - Services -->
+    <div class="footer-section">
+      <h3>Our Services</h3>
+      <ul>
+        <li><a href="#">DL Card Printing</a></li>
+        <li><a href="#">RC Card Printing</a></li>
+        <li><a href="#">PAN Card Printing</a></li>
+        <li><a href="#">Voter ID Printing</a></li>
+        <li><a href="#">Passport Size Photos</a></li>
+        <li><a href="#">Aadhar Card Printing</a></li>
+        <li><a href="#">Ration Card Printing</a></li>
+        <li><a href="#">Ayushman Card Printing</a></li>
+        <li><a href="#">E-Shram Card Printing</a></li>
+        <li><a href="#">ABC Card Printing</a></li>
+        <li><a href="#">UAN Card Printing</a></li>
+        
+      </ul>
+    </div>
+    
+    <!-- Right Section - Contact Info -->
+    <div class="footer-section">
+      <h3>Contact Information</h3>
+      <p><a href="tel:+917061171033">+91 70611 71033</a></p>
+      <p><a href="mailto:pvcprint420@gmail.com">pvcprint420@gmail.com</a></p>
+      <p>Akhauripur gola, Chausa, Buxar, Bihar -802114</p>
+      
+      <!-- Social Media Icons -->
+      <div class="social-icons">
+        <a href="https://www.facebook.com/share/17tV2vj9id/"><img src="https://img.icons8.com/ios-filled/50/FF0000/facebook-new.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/ravivlogs420?igsh=MWI3amdrN2hhaTE4ZA=="><img src="https://img.icons8.com/ios-filled/50/FF0000/instagram.png" alt="Instagram"></a>
+        <a href="https://youtube.com/@ravivlogs420?si=cqnBWtovZ2E4j4t9"><img src="https://img.icons8.com/ios-filled/50/FF0000/youtube.png" alt="YouTube"></a>
+      </div>
+    </div>
+    
+  </div>
+  
+  <!-- Bottom Section -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 Print 420. All Rights Reserved.</p>
+  </div>
+</footer>
+    
+    
+    
+    <script src="../js/contact.js">../js/contact.js</script>
+     <!-- Firebase Auth Logic -->
+    <script type="module" src="./js/auth.js"></script>
+
+    <!-- External Scripts -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
+</body>
+</html>

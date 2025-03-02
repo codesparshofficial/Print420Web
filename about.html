@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Print 420</title>
+<link rel="stylesheet" href="./css/about.css" type="text/css" media="all" />
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./img/logo.png" alt="Print 420 Logo">  <!-- Replace with your logo -->
+<span id="userEmail" style="display:none; font-weight: bold;"></span>
+        </div>
+        <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="orders.html">Orders</a></li>
+    <li><a href="contact.html">Contact</a></li>
+            
+      <li id="authLinks">
+   <!-- ✅ Yahan Firebase Auth Ke Basis Pe Button Change Hoga -->
+   <a href="login.html" id="loginBtn">Login</a></li>
+ <li id="authLinks"> 
+   <a href="#" id="logoutBtn" style="display: none;">Logout</a>
+   <a href="signup.html" id="signupBtn">Signup</a>
+ </li>
+
+        </ul>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </nav>
+<div class="nav-gap"></div>
+
+
+  <!-- Hero Section --> 
+  <section class="hero">    
+    <div class="hero-text">    
+        <h2>Why Print420.in?</h2> 
+        <h1>Precision Printing, Delivered with Excellence!</h1>    
+        <p>High-quality prints, fast delivery, and unbeatable reliability. Experience seamless printing solutions tailored just for you!</p>    
+          <a href="index.html" class="btn">Get Now</a>
+
+    </div>    
+
+    <div class="hero-img">    
+        <img src="./img/about.png" alt="Printing Image">    
+    </div>    
+</section>
+    <!-- ✅ Mission & Vision -->
+    <div class="mission-vision">
+        <div class="mission">
+            <h2>Our Mission</h2>
+            <p>To provide top-quality PVC printing services with fast delivery and customer-first service.</p>
+        </div>
+        <div class="vision">
+            <h2>Our Vision</h2>
+            <p>To be the most trusted name in printing services, making high-quality prints accessible to all.</p>
+        </div>
+    </div>
+
+    <!-- ✅ Achievements -->
+    <div class="achievements">
+        <div class="achievement"><span id="years">0</span>+ Years Experience</div>
+        <div class="achievement"><span id="prints">0</span>+ Prints Delivered</div>
+        <div class="achievement"><span id="clients">0</span>+ Happy Clients</div>
+    </div>
+
+    <!-- ✅ Our Team -->
+    <div class="team">
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="./img/ravi.png" alt="Team Member">
+                <h3>Ravi Kumar Singh</h3>
+                <p>Founder</p>
+            </div>
+            <div class="team-member">
+                <img src="https://codesparshofficial.github.io/Print420/team2.jpg" alt="Team Member">
+                <h3>Jane Smith</h3>
+                <p>Head of Operations</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ✅ Our Office -->
+    <div class="office">
+        <h2>Our Office</h2>
+        <img src="https://codesparshofficial.github.io/Print420/office.jpg" alt="Office">
+        <p>123 Business Street, City Name, State, PIN - 123456</p>
+        <a href="https://goo.gl/maps/example" class="location-btn">View Location</a>
+    </div>
+<!-- Contact Section (Reach Us) -->
+<section id="reach">
+  <h2>Get in Touch</h2>
+  <div class="contact-container">
+    
+    <!-- WhatsApp -->
+    <a href="https://wa.me/917061171033?text=Hello,%20I%20am%20interested%20in%20your%20services" class="contact-card">
+      <div class="icon-container" style="background: #FFEEEE;">
+        <img src="https://founder0techsolvy.github.io/Imgsparsh/wa.png" alt="WhatsApp">
+      </div>
+      <h3 style="color: #FF0000;">WHATSAPP</h3>
+      <p>+91 7061171033</p>
+    </a>
+    
+    <!-- Phone -->
+    <a href="tel:+917061171033" class="contact-card">
+      <div class="icon-container" style="background: #FFE5E5;">
+        <img src="https://founder0techsolvy.github.io/Imgsparsh/phone.png" alt="Phone">
+      </div>
+      <h3 style="color: #FF0000;">PHONE</h3>
+      <p>+91 70611 71033</p>
+    </a>
+    
+    <!-- Email -->
+    <a href="mailto:pvcptint420@gmail.com?subject=Inquiry" class="contact-card">
+      <div class="icon-container" style="background: #FFDDC1;">
+        <img src="https://founder0techsolvy.github.io/Imgsparsh/email.png" alt="Email">
+      </div>
+      <h3 style="color: #FF0000;">EMAIL</h3>
+      <p>pvcptint420@gmail.com</p>
+    </a>
+    
+    <!-- Address -->
+    <a href="https://maps.app.goo.gl/ArNzGTrWzGwka9G56" class="contact-card">
+      <div class="icon-container" style="background: #FEE2E2;">
+        <img src="https://founder0techsolvy.github.io/Imgsparsh/address.png" alt="Address">
+      </div>
+      <h3 style="color: #FF0000;">ADDRESS</h3>
+      <p>
+        Akhauripur gola,<br> Chausa, Buxar,<br> Bihar, 802114
+      </p>
+    </a>
+    
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-overlay"></div> <!-- Animated Background Overlay -->
+
+    <!-- Top Section with Title & Description -->
+    <div class="footer-intro">
+        <h2>Print420.in By Mr.Ravi Kumar Singh</h2>
+        <div class="underline"></div>
+        <p>Providing high-quality ID card printing, passport photos, and document printing services with fast delivery.</p>
+    </div>
+
+    <div class="footer-container">
+
+        <!-- Left Section - Quick Links -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="index.html#faqs">FAQs</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Middle Section - Services -->
+        <div class="footer-section">
+            <h3>Our Services</h3>
+            <ul>
+<li><a href="#">DL Card Printing</a></li>
+<li><a href="#">RC Card Printing</a></li>
+<li><a href="#">PAN Card Printing</a></li>
+<li><a href="#">Voter ID Printing</a></li>
+<li><a href="#">Passport Size Photos</a></li>
+<li><a href="#">Aadhar Card Printing</a></li>
+<li><a href="#">Ration Card Printing</a></li>
+<li><a href="#">Ayushman Card Printing</a></li>
+<li><a href="#">E-Shram Card Printing</a></li>
+<li><a href="#">ABC Card Printing</a></li>
+<li><a href="#">UAN Card Printing</a></li>
+
+            </ul>
+        </div>
+
+        <!-- Right Section - Contact Info -->
+        <div class="footer-section">
+            <h3>Contact Information</h3>
+            <p><a href="tel:+917061171033">+91 70611 71033</a></p>
+            <p><a href="mailto:pvcprint420@gmail.com">pvcprint420@gmail.com</a></p>
+            <p>Akhauripur gola, Chausa, Buxar, Bihar -802114</p>
+            
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="https://www.facebook.com/share/17tV2vj9id/"><img src="https://img.icons8.com/ios-filled/50/FF0000/facebook-new.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/ravivlogs420?igsh=MWI3amdrN2hhaTE4ZA=="><img src="https://img.icons8.com/ios-filled/50/FF0000/instagram.png" alt="Instagram"></a>
+                <a href="https://youtube.com/@ravivlogs420?si=cqnBWtovZ2E4j4t9"><img src="https://img.icons8.com/ios-filled/50/FF0000/youtube.png" alt="YouTube"></a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="footer-bottom">
+        <p>&copy; 2025 Print 420. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="./js/about.js"></script>
+<script type="module" src="./js/auth.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passport Size Photo Print</title>
+<link rel="stylesheet" href="./css/photo.css" type="text/css" media="all" />
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./img/logo.png" alt="Print 420 Logo">
+             <span id="userEmail" style="display:none; font-weight: bold;"></span>
+        </div>
+        <ul class="nav-links">
+               <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="orders.html">Orders</a></li>
+    <li><a href="contact.html">Contact</a></li>
+ <li id="authLinks">
+   <!-- ✅ Yahan Firebase Auth Ke Basis Pe Button Change Hoga -->
+   <a href="login.html" id="loginBtn">Login</a></li>
+ <li id="authLinks"> 
+   <a href="#" id="logoutBtn" style="display: none;">Logout</a>
+   <a href="signup.html" id="signupBtn">Signup</a>
+ </li>
+        </ul>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </nav>
+
+    <!-- Product Info -->
+    <div class="product-container">
+        <img id="previewImage" src="https://codesparshofficial.github.io/Print420/img10.png" alt="Passport Photo">
+        <div class="product-info">
+            <h2>Passport Size Photo</h2>
+            <p>Upload your photo and get 42 passport size photos printed on an A4 sheet.</p>
+            <p class="price">₹99/42 Photos</p>
+            <br>
+            <label><strong>Upload Your Photo</strong></label>
+            <input type="file" id="fileInput" accept="image/*">
+        </div>
+    </div>
+
+    <!-- Preview Section -->
+    <div class="preview-container">
+        <h2>Preview</h2>
+        <canvas id="collageCanvas"></canvas>
+    </div>
+
+    <!-- Shipping Address Form -->
+    <div class="shipping-container">
+        <h2>Shipping Address</h2>
+        <form id="shippingForm">
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="text" id="address" placeholder="Address" required>
+            <input type="text" id="city" placeholder="City" required>
+            <input type="text" id="state" placeholder="State" required>
+            <input type="number" id="pincode" placeholder="Pincode" required>
+            <input type="tel" id="mobile" placeholder="Mobile Number" required>
+        </form>
+    </div>
+
+    <!-- Order Now Button -->
+    <button id="orderBtn" class="sticky-order-btn" disabled>Checkout</button>
+
+
+
+<!-- Footer Section -->
+<footer>
+  <div class="footer-overlay"></div> <!-- Animated Background Overlay -->
+  
+  <!-- Top Section with Title & Description -->
+  <div class="footer-intro">
+    <h2>Print420.in By Mr.Ravi Kumar Singh</h2>
+    <div class="underline"></div>
+    <p>Providing high-quality ID card printing, passport photos, and document printing services with fast delivery.</p>
+  </div>
+  
+  <div class="footer-container">
+    
+    <!-- Left Section - Quick Links -->
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="index.html#faqs">FAQs</a></li>
+        <li><a href="index.html#testimonials">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    
+    <!-- Middle Section - Services -->
+    <div class="footer-section">
+      <h3>Our Services</h3>
+      <ul>
+        <li><a href="#">DL Card Printing</a></li>
+        <li><a href="#">RC Card Printing</a></li>
+        <li><a href="#">PAN Card Printing</a></li>
+        <li><a href="#">Voter ID Printing</a></li>
+        <li><a href="#">Passport Size Photos</a></li>
+        <li><a href="#">Aadhar Card Printing</a></li>
+        <li><a href="#">Ration Card Printing</a></li>
+        <li><a href="#">Ayushman Card Printing</a></li>
+        <li><a href="#">E-Shram Card Printing</a></li>
+        <li><a href="#">ABC Card Printing</a></li>
+        <li><a href="#">UAN Card Printing</a></li>
+        
+      </ul>
+    </div>
+    
+    <!-- Right Section - Contact Info -->
+    <div class="footer-section">
+      <h3>Contact Information</h3>
+      <p><a href="tel:+917061171033">+91 70611 71033</a></p>
+      <p><a href="mailto:pvcprint420@gmail.com">pvcprint420@gmail.com</a></p>
+      <p>Akhauripur gola, Chausa, Buxar, Bihar -802114</p>
+      
+      <!-- Social Media Icons -->
+      <div class="social-icons">
+        <a href="https://www.facebook.com/share/17tV2vj9id/"><img src="https://img.icons8.com/ios-filled/50/FF0000/facebook-new.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/ravivlogs420?igsh=MWI3amdrN2hhaTE4ZA=="><img src="https://img.icons8.com/ios-filled/50/FF0000/instagram.png" alt="Instagram"></a>
+        <a href="https://youtube.com/@ravivlogs420?si=cqnBWtovZ2E4j4t9"><img src="https://img.icons8.com/ios-filled/50/FF0000/youtube.png" alt="YouTube"></a>
+      </div>
+    </div>
+    
+  </div>
+  
+  <!-- Bottom Section -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 Print 420. All Rights Reserved.</p>
+  </div>
+</footer>
+  <script>
+//menu bar 
+        function toggleMenu() {
+            let nav = document.querySelector(".nav-links");
+            let menuIcon = document.querySelector(".menu-icon");
+            
+            if (nav.style.height === "0px" || nav.style.height === "") {
+                nav.style.height = nav.scrollHeight + "px";  // Auto height
+                menuIcon.innerHTML = "✖";
+            } else {
+                nav.style.height = "0px";
+                menuIcon.innerHTML = "☰";
+            }
+        }
+        
+        
+document.getElementById('fileInput').addEventListener('change', handleFile);
+document.getElementById('orderBtn').addEventListener('click', saveOrderData);
+
+function handleFile(event) {
+  const file = event.target.files[0];
+  if (file) {
+    document.getElementById('orderBtn').disabled = false; // ✅ Enable button
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      let img = new Image();
+      img.src = e.target.result;
+      img.onload = function() {
+        generateCollage(img);
+      };
+    };
+    reader.readAsDataURL(file);
+  }
+}
+
+
+function generateCollage(img) {
+  const canvas = document.getElementById('collageCanvas');
+  const ctx = canvas.getContext('2d');
+  const cols = 6, rows = 7;
+  const gap = 8;
+  const photoWidth = 2.5 * 96;
+  const photoHeight = 3.5 * 96;
+  
+  canvas.width = cols * (photoWidth + gap) - gap;
+  canvas.height = rows * (photoHeight + gap) - gap;
+  
+  for (let row = 0; row < rows; row++) {
+    for (let col = 0; col < cols; col++) {
+      const x = col * (photoWidth + gap);
+      const y = row * (photoHeight + gap);
+      ctx.drawImage(img, x, y, photoWidth, photoHeight);
+    }
+  }
+}
+  </script>
+<script>
+document.getElementById('orderBtn').addEventListener('click', function () {
+    const productName = encodeURIComponent("Passport Size Photo");
+    const productPrice = encodeURIComponent("₹99");
+    const productType = encodeURIComponent("42 Photos on A4 Sheet");
+
+    const fileInput = document.getElementById("fileInput").files[0];
+
+    if (!fileInput) {
+        alert("❌ Please upload your passport photo!");
+        return;
+    }
+
+    const fullName = encodeURIComponent(document.getElementById("fullName").value);
+    const address = encodeURIComponent(document.getElementById("address").value);
+    const city = encodeURIComponent(document.getElementById("city").value);
+    const state = encodeURIComponent(document.getElementById("state").value);
+    const pincode = encodeURIComponent(document.getElementById("pincode").value);
+    const mobile = encodeURIComponent(document.getElementById("mobile").value);
+
+    // ✅ Convert Image to Base64
+    const reader = new FileReader();
+    reader.readAsDataURL(fileInput);
+    reader.onload = function () {
+        const image = encodeURIComponent(reader.result);
+
+        // ✅ Redirect to Checkout Page with Query Params
+        const queryString = `name=${productName}&price=${productPrice}&type=${productType}&image1=${image}&fullName=${fullName}&address=${address}&city=${city}&state=${state}&pincode=${pincode}&mobile=${mobile}`;
+        window.location.href = `checkout.html?${queryString}`;
+    };
+});
+</script>
+
+<script type="module" src="./js/auth.js"></script>
+
+</body>
+</html>

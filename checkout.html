@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script type="module" src="./js/auth.js"></script>
+    <link rel="stylesheet" href="./css/checkout.css">
+    
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="./img/logo.png" alt="Print 420 Logo"> <!-- Replace with your logo -->
+      <span id="userEmail" style="display:none; font-weight: bold;"></span>
+    </div>
+    <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="orders.html">Orders</a></li>
+    <li><a href="contact.html">Contact</a></li>
+      
+      <li id="authLinks">
+        <!-- ✅ Yahan Firebase Auth Ke Basis Pe Button Change Hoga -->
+        <a href="login.html" id="loginBtn">Login</a>
+      </li>
+      <li id="authLinks">
+        <a href="#" id="logoutBtn" style="display: none;">Logout</a>
+        <a href="signup.html" id="signupBtn">Signup</a>
+      </li>
+      
+    </ul>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </nav>
+  
+  <style>
+  .gap-div {
+    margin-top: 100px;
+  }
+</style>
+
+<div class="gap-div">
+    <h2 class="text-2xl font-bold text-center"></h2>
+</div>
+
+<!-- ✅ Checkout Summary -->
+<div class="checkout-container">
+    <h2>Order Summary</h2>
+    <div class="order-details">
+        <div class="image-container">
+            <img id="orderImage1" src="" alt="Front Side">
+            <img id="orderImage2" src="" alt="Back Side" style="display: none;"> <!-- Default Hidden -->
+        </div>
+        <div>
+            <h3 id="orderName"></h3>
+            <p id="orderPrice"></p>
+            <p id="orderType"></p> 
+            <p>Quantity: 1</p>
+        </div>
+    </div>
+</div>
+
+<!-- ✅ Shipping Details -->
+<div class="shipping-container">
+    <h2>Shipping Address</h2>
+    <p><strong>Name:</strong> <span id="fullName"></span></p>
+    <p><strong>Address:</strong> <span id="address"></span></p>
+    <p><strong>City:</strong> <span id="city"></span></p>
+    <p><strong>State:</strong> <span id="state"></span></p>
+    <p><strong>Pincode:</strong> <span id="pincode"></span></p>
+    <p><strong>Mobile:</strong> <span id="mobile"></span></p>
+</div>
+
+<!-- ✅ Payment Button -->
+<button id="placeOrderBtn">Proceed to Payment</button>
+
+<script type="module" src="./js/checkout.js"></script>
+
+</body>
+</html>

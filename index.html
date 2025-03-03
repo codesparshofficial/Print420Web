@@ -3,461 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Print 420 - Home</title>
-    <link rel="stylesheet" href="./css/styles.css" type="text/css" media="all" />
-    <style>
-        /* Reset */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-        body { background: #f8f8f8; color: #333; }
-
-
-    </style>
+    <title>Admin Panel - Orders</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
-<body>
+<body class="bg-gray-100 p-6">
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">
-            <img src="./img/logo.png" alt="Print 420 Logo">  <!-- Replace with your logo -->
-<span id="userEmail" style="display:none; font-weight: bold;"></span>
-        </div>
-        <ul class="nav-links">
-               <li><a href="index.html">Home</a></li>
-    <li><a href="index.html#services">Services</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="orders.html">Orders</a></li>
-    <li><a href="contact.html">Contact</a></li>
-            
-      <li id="authLinks">
-   <!-- ✅ Yahan Firebase Auth Ke Basis Pe Button Change Hoga -->
-   <a href="login.html" id="loginBtn">Login</a></li>
- <li id="authLinks"> 
-   <a href="#" id="logoutBtn" style="display: none;">Logout</a>
-   <a href="signup.html" id="signupBtn">Signup</a>
- </li>
-
-        </ul>
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    </nav>
-<div class="nav-gap"></div>
-
-
-  <!-- Hero Section --> 
-  <section class="hero">    
-    <div class="hero-text">    
-        <h2>Print420.in</h2> <!-- Company Name Added -->
-        <h1>Fast & High-Quality Printing Services!</h1>    
-        <p>Print Your ID Cards & Documents with Ease. Quick Delivery & Best Quality.</p>    
-        <a href="#services" class="btn">View Services</a>    
-        <a href="#" class="btn">About Us</a>    
-    </div>    
-
-    <div class="hero-img">    
-        <img src="./img/hero.png" alt="Printing Image">    
-    </div>    
-</section>
-   <!-- Services Section --> 
-   <section id="services"  class="services">  
-  <h2>Our Services</h2>  
-  <div class="services-grid">  
-  
-  <!-- Passport Size Photo -->
-<div class="service-card">
-  <img src="https://codesparshofficial.github.io/Print420/img10.png" alt="RC Card">
-  <h3>Passport Size Photo</h3>
-  <p>Upload Your one photo and get 42 passport size photo at your doorstep</p>
-  <div class="price-tag">₹99</div>
-  <a href="photo.html" class="btn-order">Order Now</a>
-</div>
-
-<!-- Aadhar Card -->
-<div class="service-card">
-  <img src="https://codesparshofficial.github.io/Print420/img9.png" alt="Aadhar Card">
-  <h3>Aadhar Card</h3>
-  <p>High-quality Aadhar card prints on PVC.</p>
-  <div class="price-tag">₹120</div>
-  <a href="aadhar.html" class="btn-order">Order Now</a>
-</div>
-
-
-
-<!-- DL Card -->
-<div class="service-card">
-  <img src="https://codesparshofficial.github.io/Print420/img7.png" alt="DL Card">
-  <h3>DL Card</h3>
-  <p>Get your driving license printed on premium PVC.</p>
-  <div class="price-tag">₹120</div>
-  <a href="dl.html" class="btn-order">Order Now</a>
-</div>
-
-<!-- RC Card -->
-<div class="service-card">
-  <img src="https://codesparshofficial.github.io/Print420/img2.png" alt="RC Card">
-  <h3>RC Card</h3>
-  <p>Vehicle registration card prints on PVC with high-quality finish.</p>
-  <div class="price-tag">₹120</div>
-  <a href="rc.html" class="btn-order">Order Now</a>
-</div>
-
-<!-- PAN Card -->
-<div class="service-card">
-  <img src="https://codesparshofficial.github.io/Print420/img11.png" alt="PAN Card">
-  <h3>PAN Card</h3>
-  <p>PAN Card reprints on durable material, PVC.</p>
-  <div class="price-tag">₹120</div>
-  <a href="pan.html" class="btn-order">Order Now</a>
-</div>
-
-<!-- Voter ID -->
-<div class="service-card">
-  <img src="https://codesparshofficial.github.io/Print420/img8.png" alt="Voter ID">
-  <h3>Voter ID</h3>
-  <p>Secure your voter ID prints in high quality at PVC card.</p>
-  <div class="price-tag">₹120</div>
-  <a href="vid.html" class="btn-order">Order Now</a>
-</div>
-
-
-<!-- Ration Card -->
-<div class="service-card">
-  <img src="https://codesparshofficial.github.io/Print420/img3.png" alt="Ration Card">
-  <h3>Ration Card</h3>
-  <p>Print your ration card on a durable PVC card.</p>
-  <div class="price-tag">₹120</div>
-  <a href="ration.html" class="btn-order">Order Now</a>
-</div>
-
-
-
-<!-- Ayushman Card -->
-<div class="service-card">
-  <img src="https://codesparshofficial.github.io/Print420/img4.png" alt="Ayushman Card">
-  <h3>Ayushman Card</h3>
-  <p>Get your Ayushman Bharat card printed on PVC.</p>
-  <div class="price-tag">₹120</div>
-  <a href="ayushman.html" class="btn-order">Order Now</a>
-</div>
-
-<!-- E-Shram Card -->
-<div class="service-card">
-  <img src="https://codesparshofficial.github.io/Print420/img5.png" alt="E-Shram Card">
-  <h3>E-Shram Card</h3>
-  <p>Durable PVC prints for your E-Shram card.</p>
-  <div class="price-tag">₹120</div>
-  <a href="eshram.html" class="btn-order">Order Now</a>
-</div>
-
-<!-- ABC Card -->
-<div class="service-card">
-  <img src="https://codesparshofficial.github.io/Print420/img1.png" alt="ABC Card">
-  <h3>ABC Card</h3>
-  <p>Print your Academic Bank of Credits (ABC) card.</p>
-  <div class="price-tag">₹120</div>
-  <a href="abc.html" class="btn-order">Order Now</a>
-</div>
-
-<!-- UAN Card -->
-<div class="service-card">
-  <img src="https://codesparshofficial.github.io/Print420/img6.png" alt="UAN Card">
-  <h3>UAN Card</h3>
-  <p>Get your UAN card printed on a high-quality PVC.</p>
-  <div class="price-tag">₹120</div>
-  <a href="uan.html" class="btn-order">Order Now</a>
-</div>
-
-
-  </div>  
-</section>  
-
-
-<!-- Our Streamlined Service Process -->
-<section class="service-process">
-  <h2>Our Streamlined Service Process</h2>
-  <p>We ensure a smooth, hassle-free service experience from order to delivery.</p>
-  
-  <div class="process-container">
-    <div class="process-box">
-      <div class="circle red">
-        <img src="https://img.icons8.com/ios-filled/50/ffffff/online-store.png" />
-      </div>
-      <h3>Select Service</h3>
-    </div>
-    
-    <div class="arrow">➔</div>
-    
-    <div class="process-box">
-      <div class="circle white">
-        <img src="https://img.icons8.com/ios-filled/50/d32f2f/upload.png" />
-      </div>
-      <h3>Upload Documents</h3>
-    </div>
-    
-    <div class="arrow">➔</div>
-    
-    <div class="process-box">
-      <div class="circle red">
-        <img src="https://img.icons8.com/ios-filled/50/ffffff/money.png" />
-      </div>
-      <h3>Make Payment</h3>
-    </div>
-    
-    <div class="arrow">➔</div>
-    
-    <div class="process-box">
-      <div class="circle white">
-        <img src="https://img.icons8.com/ios-filled/50/d32f2f/checked.png" />
-      </div>
-      <h3>Team Checks Your Documents</h3>
-    </div>
-    
-    <div class="arrow">➔</div>
-    
-    <div class="process-box">
-      <div class="circle red">
-        <img src="https://img.icons8.com/ios-filled/50/ffffff/print.png" />
-      </div>
-      <h3>High-Quality Print</h3>
-    </div>
-    
-    <div class="arrow">➔</div>
-    
-    <div class="process-box">
-      <div class="circle white">
-        <img src="https://img.icons8.com/ios-filled/50/d32f2f/box.png" />
-      </div>
-      <h3>Secure Packaging</h3>
-    </div>
-    
-    <div class="arrow">➔</div>
-    
-    <div class="process-box">
-      <div class="circle red">
-        <img src="https://img.icons8.com/ios-filled/50/ffffff/delivery.png" />
-      </div>
-      <h3>Doorstep Delivery</h3>
-    </div>
-  </div>
-</section>
-
-
-<!-- Why Choose Us Section -->
-<section class="why-choose">
-    <h2>Why Choose Us?</h2>
-    <div class="choose-grid">
-        <div class="choose-card">
-            <div class="icon">⚡</div>
-            <h3>Fast Processing</h3>
-            <p>We ensure quick printing & delivery of your ID cards and documents.</p>
-        </div>
-        <div class="choose-card">
-            <div class="icon">🎨</div>
-            <h3>High-Quality Prints</h3>
-            <p>Premium printing quality with durable material and vibrant colors.</p>
-        </div>
-        <div class="choose-card">
-            <div class="icon">💰</div>
-            <h3>Affordable Pricing</h3>
-            <p>Best rates in the market with top-notch printing services.</p>
-        </div>
-        <div class="choose-card">
-            <div class="icon">🛡️</div>
-            <h3>Secure & Reliable</h3>
-            <p>Your data is safe and secured with encrypted processing.</p>
-        </div>
-        <div class="choose-card">
-            <div class="icon">📦</div>
-            <h3>Doorstep Delivery</h3>
-            <p>Convenient doorstep delivery of printed documents anywhere.</p>
-        </div>
-    </div>
-</section>
-
-<section id="testimonials" style="background: #fff; padding: 60px 20px; max-width: 1000px; margin: auto; display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-
-    <!-- Smiley Image -->
-    <div style="flex: 0 0 auto;">
-        <img src="https://webwallah.in/wp-content/uploads/2024/04/smile.png" alt="Smiley" style="width: 100px; height: auto; display: block;">
+    <div class="flex justify-between mb-4">
+        <h1 class="text-2xl font-bold">Admin Panel - Orders</h1>
+        <button onclick="logout()" class="bg-red-500 text-white px-4 py-2 rounded">Logout</button>
     </div>
 
-    <!-- Text Content -->
-    <div style="flex: 1; min-width: 250px;">
-        <h2 style="font-size: 2.5rem; font-weight: bold; color: #111; margin-bottom: 5px;">
-            Your Exceptional
-        </h2>
-        <h2 style="font-size: 2.5rem; font-weight: bold; color: #E55039; margin-bottom: 10px;">
-            Love & Support
-        </h2>
-        <p style="color: #333; font-size: 1.2rem; margin-bottom: 30px;">For our work</p>
+    <!-- Loader -->
+    <div id="loader" class="flex justify-center items-center h-32">
+        <div class="animate-spin rounded-full h-10 w-10 border-t-4 border-blue-500"></div>
     </div>
 
+    <div id="ordersContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 hidden"></div>
 
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getFirestore, collection, getDocs, updateDoc, doc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
 
-<!-- Testimonials Section -->
-<section style="width: 100%; max-width: 1000px; margin: auto;">
-    <script src="https://widget.senja.io/widget/a599f764-2aa6-4106-aeed-142581e46646/platform.js" type="text/javascript" async></script>
-    <div class="senja-embed" data-id="a599f764-2aa6-4106-aeed-142581e46646" data-mode="shadow" data-lazyload="false" style="display: block;"></div>
-</section>
-</section>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBaDy2PoG_-KZVYoraD3tpU_C8CUvKQYQk",
+            authDomain: "print420-bbf5b.firebaseapp.com",
+            projectId: "print420-bbf5b",
+            storageBucket: "print420-bbf5b.appspot.com",
+            messagingSenderId: "240976479161",
+            appId: "1:240976479161:web:930be6bdf355e041df2c68"
+        };
 
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const auth = getAuth();
 
+        window.ADMIN_UIDS = ["FOfcAgT7VBgMr3Zf785LSpwKWAz2"];
 
+        onAuthStateChanged(auth, (user) => {
+            if (user && window.ADMIN_UIDS.includes(user.uid)) {
+                fetchOrders();
+            } else {
+                window.location.href = "login.html";
+            }
+        });
 
+        async function fetchOrders() {
+            const querySnapshot = await getDocs(collection(db, "orders"));
+            let ordersHTML = "";
 
+            querySnapshot.forEach((doc) => {
+                const order = doc.data();
+                const orderId = doc.id;
 
+                let imagesHTML = order.image1 || order.image2 ? `
+                    <div class="flex gap-4">
+                        ${order.image1 ? `<a href="${order.image1}" download><img src="${order.image1}" class="w-32 h-32 object-cover border"></a>` : ""}
+                        ${order.image2 ? `<a href="${order.image2}" download><img src="${order.image2}" class="w-32 h-32 object-cover border"></a>` : ""}
+                    </div>
+                ` : "";
 
+                ordersHTML += `
+                    <div class="border p-4 rounded-lg shadow-md bg-white">
+                        <h2 class="text-lg font-semibold">${order.name} - ₹${order.price}</h2>
+                        <p><strong>Customer:</strong> ${order.fullName}</p>
+                        <p><strong>Mobile:</strong> ${order.mobile}</p>
+                        <p><strong>Address:</strong> ${order.address}, ${order.city}, ${order.state}, ${order.pincode}</p>
+                        <p><strong>Payment Status:</strong> ${order.paymentStatus}</p>
+                        <p><strong>Current Status:</strong> <span id="status-${orderId}">${order.status}</span></p>
 
-<!-- FAQs Section -->
-<section id="faqs" class="faqs">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-container">
-      
-       <div class="faq-item">
-   <div class="faq-question">👨 Who is founder of Print420.In? <span class="arrow">+</span></div>
-   <div class="faq-answer">Mr.Ravi Kumar Singh, Who is a young entreprenure.</div>
- </div>
+                        ${imagesHTML}
 
-        <div class="faq-item">
-            <div class="faq-question">📌 How do I place an order? <span class="arrow">+</span></div>
-            <div class="faq-answer">You can place an order by selecting the service, uploading the required documents, and making the payment.</div>
-        </div>
+                        <div class="mt-3">
+                            <button id="btn-${orderId}" onclick="updateStatus('${orderId}', '${order.status}')" class="bg-blue-500 text-white px-3 py-1 rounded">Update Status</button>
+                            <button onclick="generateReceipt('${orderId}')" class="bg-green-500 text-white px-3 py-1 rounded ml-2">Generate Receipt</button>
+                        </div>
+                    </div>
+                `;
+            });
 
-        <div class="faq-item">
-            <div class="faq-question">📂 What type of documents can I upload? <span class="arrow">+</span></div>
-            <div class="faq-answer">You can upload PDFs, JPGs, and PNGs for printing. Make sure the quality is high for the best results.</div>
-        </div>
+            document.getElementById("ordersContainer").innerHTML = ordersHTML;
 
-        <div class="faq-item">
-            <div class="faq-question">💳 What payment methods do you accept? <span class="arrow">+</span></div>
-            <div class="faq-answer">We accept payments through UPI, credit/debit cards, net banking, and digital wallets.</div>
-        </div>
+            // Loader को हटाकर, Orders दिखाना
+            document.getElementById("loader").classList.add("hidden");
+            document.getElementById("ordersContainer").classList.remove("hidden");
+        }
 
-        <div class="faq-item">
-            <div class="faq-question">🚚 How long does delivery take? <span class="arrow">+</span></div>
-            <div class="faq-answer">Standard delivery takes 3-5 working days. Express delivery options are also available.</div>
-        </div>
+        window.updateStatus = async function(orderId, currentStatus) {
+            const statusList = ["Processing", "Shipped", "Delivered"];
+            let newIndex = (statusList.indexOf(currentStatus) + 1) % statusList.length;
+            let newStatus = statusList[newIndex];
 
-        
+            let btn = document.getElementById(`btn-${orderId}`);
+            btn.innerHTML = "Updating...";
+            btn.disabled = true;
 
-    </div>
-</section>
+            const orderRef = doc(db, "orders", orderId);
+            await updateDoc(orderRef, { status: newStatus });
 
-<!-- Contact Section (Reach Us) -->
-<section id="reach">
-  <h2>Get in Touch</h2>
-  <div class="contact-container">
-    
-    <!-- WhatsApp -->
-    <a href="https://wa.me/917061171033?text=Hello,%20I%20am%20interested%20in%20your%20services" class="contact-card">
-      <div class="icon-container" style="background: #FFEEEE;">
-        <img src="https://founder0techsolvy.github.io/Imgsparsh/wa.png" alt="WhatsApp">
-      </div>
-      <h3 style="color: #FF0000;">WHATSAPP</h3>
-      <p>+91 7061171033</p>
-    </a>
-    
-    <!-- Phone -->
-    <a href="tel:+917061171033" class="contact-card">
-      <div class="icon-container" style="background: #FFE5E5;">
-        <img src="https://founder0techsolvy.github.io/Imgsparsh/phone.png" alt="Phone">
-      </div>
-      <h3 style="color: #FF0000;">PHONE</h3>
-      <p>+91 70611 71033</p>
-    </a>
-    
-    <!-- Email -->
-    <a href="mailto:pvcptint420@gmail.com?subject=Inquiry" class="contact-card">
-      <div class="icon-container" style="background: #FFDDC1;">
-        <img src="https://founder0techsolvy.github.io/Imgsparsh/email.png" alt="Email">
-      </div>
-      <h3 style="color: #FF0000;">EMAIL</h3>
-      <p>pvcptint420@gmail.com</p>
-    </a>
-    
-    <!-- Address -->
-    <a href="https://maps.app.goo.gl/ArNzGTrWzGwka9G56" class="contact-card">
-      <div class="icon-container" style="background: #FEE2E2;">
-        <img src="https://founder0techsolvy.github.io/Imgsparsh/address.png" alt="Address">
-      </div>
-      <h3 style="color: #FF0000;">ADDRESS</h3>
-      <p>
-        Akhauripur gola,<br> Chausa, Buxar,<br> Bihar, 802114
-      </p>
-    </a>
-    
-  </div>
-</section>
+            document.getElementById(`status-${orderId}`).textContent = newStatus;
+            btn.innerHTML = "Update Status";
+            btn.disabled = false;
 
-<!-- Footer Section -->
-<footer>
-    <div class="footer-overlay"></div> <!-- Animated Background Overlay -->
+            alert("Order status updated to " + newStatus);
+        };
 
-    <!-- Top Section with Title & Description -->
-    <div class="footer-intro">
-        <h2>Print420.in By Mr.Ravi Kumar Singh</h2>
-        <div class="underline"></div>
-        <p>Providing high-quality ID card printing, passport photos, and document printing services with fast delivery.</p>
-    </div>
+        window.generateReceipt = function(orderId) {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
 
-    <div class="footer-container">
+            doc.text("Order Receipt", 20, 20);
+            doc.text("Order ID: " + orderId, 20, 30);
+            doc.text("Status: Delivered", 20, 40);
+            doc.text("Thank you for your order!", 20, 50);
 
-        <!-- Left Section - Quick Links -->
-        <div class="footer-section">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="index.html#faqs">FAQs</a></li>
-                <li><a href="index.html#testimonials">Testimonials</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
+            doc.save(`receipt_${orderId}.pdf`);
+        };
 
-        <!-- Middle Section - Services -->
-        <div class="footer-section">
-            <h3>Our Services</h3>
-            <ul>
-<li><a href="#">DL Card Printing</a></li>
-<li><a href="#">RC Card Printing</a></li>
-<li><a href="#">PAN Card Printing</a></li>
-<li><a href="#">Voter ID Printing</a></li>
-<li><a href="#">Passport Size Photos</a></li>
-<li><a href="#">Aadhar Card Printing</a></li>
-<li><a href="#">Ration Card Printing</a></li>
-<li><a href="#">Ayushman Card Printing</a></li>
-<li><a href="#">E-Shram Card Printing</a></li>
-<li><a href="#">ABC Card Printing</a></li>
-<li><a href="#">UAN Card Printing</a></li>
-
-            </ul>
-        </div>
-
-        <!-- Right Section - Contact Info -->
-        <div class="footer-section">
-            <h3>Contact Information</h3>
-            <p><a href="tel:+917061171033">+91 70611 71033</a></p>
-            <p><a href="mailto:pvcprint420@gmail.com">pvcprint420@gmail.com</a></p>
-            <p>Akhauripur gola, Chausa, Buxar, Bihar -802114</p>
-            
-            <!-- Social Media Icons -->
-            <div class="social-icons">
-                <a href="https://www.facebook.com/share/17tV2vj9id/"><img src="https://img.icons8.com/ios-filled/50/FF0000/facebook-new.png" alt="Facebook"></a>
-                <a href="https://www.instagram.com/ravivlogs420?igsh=MWI3amdrN2hhaTE4ZA=="><img src="https://img.icons8.com/ios-filled/50/FF0000/instagram.png" alt="Instagram"></a>
-                <a href="https://youtube.com/@ravivlogs420?si=cqnBWtovZ2E4j4t9"><img src="https://img.icons8.com/ios-filled/50/FF0000/youtube.png" alt="YouTube"></a>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Bottom Section -->
-    <div class="footer-bottom">
-        <p>&copy; 2025 Print 420. All Rights Reserved.</p>
-    </div>
-</footer>
-
-
-
-<script src="./js/main.js">main.js</script>
-<script type="module" src="./js/auth.js"></script>
-
+        window.logout = function() {
+            signOut(auth).then(() => {
+                window.location.href = "login.html";
+            });
+        };
+    </script>
 </body>
 </html>
